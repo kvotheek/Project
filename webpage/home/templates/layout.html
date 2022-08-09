@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <!-- Bootstrap code 21.07.2022-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+        <title>Estudio Flashcards</title>
+
+        <!-- Including main.css for visual changes makes a mistake now there is no {% load static %}
+        <link rel="stylesheet"  type="text/css" href="{% static 'main.css' %}"> -->
+
+        <!-- For zoomin zoomout 21.07.2022 -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+        
+        <style>
+            /* Section of style that changes the "<body>" properties by naming the function as body as a variable here. This way change the background color */
+            body {
+              background-color: #153b63;
+            }
+            /* Section of style that changes the "<class= navbar ...>" properties naming the function as .navbar as a variable here. This way you can change the background color */
+            .navbar{
+                background:#ec6811
+                /*#f69f19 otro color*/
+            } 
+            /* Section that works for zoomin zoomout image. Replace any btn in zoom HTML and JS with boton. Padding section eliminated from based code for better aligning */
+            .boton {
+                width: 30px;
+                height: 30px;
+                background: #FFF;
+                border: 1px solid #005bac;
+                border-radius: 50%;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                color: #005bac;
+                position: fixed;
+                text-align: center;
+                -ms-user-select: none;
+                -moz-user-select: -moz-none;  /* changed from -moz -none to none. More info: http://help.dottoro.com/lcrlukea.php*/
+                -khtml-user-select: none;
+                -webkit-user-select: none;
+                user-select: none;
+                    transition: all 0.3s ease;
+                z-index: 1;
+                }
+            .boton:hover {
+                background: #eef;
+                }
+/* This only changes de position from botton to top where the buttons are */
+            .zoom {
+                bottom: 290px;
+                }
+
+            .zoom-out {
+                bottom: 220px;
+                }
+            .zoom-init {
+                bottom: 150px;
+                }
+
+        </style>
+
+
+        <script>
+            var zoom = 1;
+
+            $('.zoom').on('click', function(){
+                zoom += 0.1;
+                $('.target').css('transform', 'scale(' + zoom + ')');
+            });
+            $('.zoom-init').on('click', function(){
+                zoom = 1;
+                $('.target').css('transform', 'scale(' + zoom + ')');
+            });
+            $('.zoom-out').on('click', function(){
+                zoom -= 0.1;
+                $('.target').css('transform', 'scale(' + zoom + ')');
+            });
+        </script><!-- End of zoom script in JS-->
+
+    </head> 
+
+    <body>
+        <!-- Including navigation bar-->
+        {% include 'partials/navbar.html' %}
+        <div class="container-md clearfix">
+            <!-- Including table for better device format and visibilization-->
+            <br/>
+            <table align="center" bgcolor= "#ec6811" cellpadding="1" cellspacing="1" style="border-radius: 20px">
+                <tr>
+                
+                    {% block content %}
+                    
+                    {% endblock %}
+    
+                </tr>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+
+
+
+</html>

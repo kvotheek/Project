@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2 style= "color:white ; text-align:center;"> Registro </h2>
+<div class="card">
+    <div class="card-body">
+        <form action="registro_exitoso" method="POST"> {% csrf_token %} <!-- protege de acciones desautorizadas -->
+            <div class="form-group">
+                <input type="text" id="txtNombre" name="txtNombre" class="form-control" 
+                placeholder="Nombre" maxlength="12" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="txtApellido" name="txtApellido" class="form-control" 
+                placeholder="Apellido" maxlength="20" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="txtMail" name="txtMail" class="form-control" 
+                placeholder="Mail" maxlength="40" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="txtUsuario" name="txtUsuario" class="form-control" 
+                placeholder="Usuario"  maxlength="12" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="txtClave" name="txtClave" class="form-control" 
+                placeholder="Clave" minlength="10" maxlength="12" required>
+            </div>
+
+            <!-- Button for suscription of user to database with all data required complete -->
+            <button class="btn btn-outline-success"> Registrarme </button>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

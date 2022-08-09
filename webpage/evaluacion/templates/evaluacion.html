@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<td>
+    <div style="color:white; text-align:center;">
+        <h1 > Evaluacion inicial </h1>
+        <p> En la evaluacion inicial tendras que analizar 30 casos de estudio seleccionando la alternativa que tu creas correcta y 
+            luego presionando el botón siguiente. Finalmente cuando termines podrás ir a las secciones de estudio habilitadas
+            para poder ver los casos de estudio, conocer las respuestas y ver mayor información. 
+            
+            Mucho exito y da lo mejor de ti en este test!
+        </p>
+    </div>
+    
+</td>
+
+<td>
+    <br> <br> <a class="btn btn-success" href="{% url 'uno_' %}" role="button" > Iniciar evaluacion</a>
+
+</td>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+ {% for info in primera %}
+ <h1 style="color:white ; text-align:center;"> Caso {{info.numero_respuesta_alt}}</h1> <br/>
+
+  <td style="padding-left: 20px;">
+    <a class="boton zoom"><i class="fas fa-search-plus"></i></a>
+    <a class="boton zoom-out"><i class="fas fa-search-minus"></i></a>
+    <a class="boton zoom-init"><i class="fas fa-recycle"></i></a>
+    <img class= "target" src=" {{info.imagen_con_patologia.url}}" > <br>
+
+  </td> <!--End of column-->
+
+  <td style="padding-right: 50px;">
+
+    <a style=" font-size: 20px">{{info.pregunta}} </a> <br><br>
+
+
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action">{{info.alternativa_1}} </a> <br>
+        <a class="list-group-item list-group-item-action">{{info.alternativa_2}} </a> <br>
+        <a class="list-group-item list-group-item-action">{{info.alternativa_3}} </a> <br>
+        <a class="list-group-item list-group-item-action">{{info.alternativa_4}} </a> <br>
+        <a class="list-group-item list-group-item-action">{{info.alternativa_5}} </a> <br>
+        
+    </div>
+    <br> <br> <a class="btn btn-outline-warning text-center" href="{% url 'uno_r' %}" role="button" > Enviar respuesta </a>
+  </td>
+  
+  <!-- by clicking on the button, you get redirected to uno_r, the function in views.py that contains the answer res_1.html-->
+  
+{% endfor %}
+{% endblock %}

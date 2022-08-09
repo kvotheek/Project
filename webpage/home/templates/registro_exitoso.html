@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<td>
+    <h1 style="color:white; text-align:center;"> Estas registrado </h1>
+</td>
+
+<td>
+    <a href="{% url 'inicio' %}" >  
+        <button class="btn btn-outline-warning"> Volver al inicio </button>
+    </a><br>
+
+    <a href="{% url 'inicio_alternativas' %}" >  
+        <button class="btn btn-outline-warning"> Alternativas </button>
+    </a><br>
+</td>
+{% endblock %}

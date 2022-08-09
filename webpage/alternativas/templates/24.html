@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% for info in veinticuatro %}
+<h1 style="color:white ; text-align:center;"> Caso {{info.numero_respuesta_alt}}</h1> <br/>
+
+  <td style="padding-left: 20px;">
+    <img src=" {{info.imagen_con_patologia.url}}" width="75%" > <br>
+  </td>
+
+  <td style="padding-right: 50px;">
+    <a style=" font-size: 20px">{{info.pregunta}} </a> <br><br>
+    
+    <div class="list-group">
+      <a class="list-group-item list-group-item-action">{{info.alternativa_1}} </a> <br>
+      <a class="list-group-item list-group-item-action">{{info.alternativa_2}} </a> <br>
+      <a class="list-group-item list-group-item-action">{{info.alternativa_3}} </a> <br>
+      <a class="list-group-item list-group-item-action">{{info.alternativa_4}} </a> <br>
+      <a class="list-group-item list-group-item-action">{{info.alternativa_5}} </a> <br>
+      
+  </div>
+  <br> <br> <a class="btn btn-outline-warning " href="{% url 'veinticuatro_r' %}" role="button" > Ver respuesta </a>
+
+</td>
+{% endfor %}
+{% endblock %}
