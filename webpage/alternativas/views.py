@@ -17,7 +17,8 @@ def p_detail(request, p_id):
 
 # Funcion de las preguntas. con filter se obtiene la información del moódulo específico. Devuelve la database y el .html correspondiente al numero de la pregunta.  
 def uno(request):
-    primera= secc_alternativa.objects.filter(numero_respuesta_alt=1)  
+    primera= secc_alternativa.objects.filter(numero_respuesta_alt=1)
+     
     return render(request, '1.html',{'primera':primera})  
 
 def dos(request):

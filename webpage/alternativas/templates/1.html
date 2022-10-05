@@ -8,7 +8,7 @@
     <a class="boton zoom"><i class="fas fa-search-plus"></i></a>
     <a class="boton zoom-out"><i class="fas fa-search-minus"></i></a>
     <a class="boton zoom-init"><i class="fas fa-recycle"></i></a>
-    <img class= "target" src=" {{info.imagen_con_patologia.url}}" > <br>
+    <img id= "target" src=" {{info.imagen_con_patologia.url}}" > <br>
 
   </td> <!--End of column-->
 
@@ -25,7 +25,10 @@
         <a class="list-group-item list-group-item-action">{{info.alternativa_5}} </a> <br>
         
     </div>
-    <br> <br> <a class="btn btn-outline-warning text-center" href="{% url 'uno_r' %}" role="button" > Enviar respuesta </a>
+    <br> <br> <a class="btn btn-success text-center contenedor-boton-inicio" href="{% url 'uno_r' %}" role="button" > ver respuesta </a> 
+    <br> <br> <a class="btn btn-primary text-center contenedor-boton-inicio" href="{% url 'dos' %}" role="button" > Siguiente pregunta </a> 
+    <!-- AQUI HAY QUE AGREGAR UN ID, QUE LUEGO SERÁ LLAMADO EN JAVASCRIPT y hacer const boton= document.getElementById ('id-seleccionada') y asi luego hacer en JAVASCRIPT 
+    boton.addEventListener('click'), () => { window.location.href= url+pk } y asi se cambia de página :D-->
   </td>
   
   <!-- by clicking on the button, you get redirected to uno_r, the function in views.py that contains the answer res_1.html-->

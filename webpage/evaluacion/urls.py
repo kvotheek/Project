@@ -1,11 +1,6 @@
 from django.urls import path
 
-from .views import evaluacion
-
-from .views import uno_, dos_, tres_, cuatro_, cinco_, seis_, siete_, ocho_, nueve_, diez_
-from .views import once_, doce_, trece_, catorce_, quince_, diesciseis_, diescisiete_, diesciocho_, diescinueve_, veinte_
-from .views import veintiuno_, veintidos_, veintitres_, veinticuatro_, veinticinco_, veintiseis_, veintisiete_, veintiocho_, veintinueve_, treinta_ 
-
+from .views import *
 
 urlpatterns= [
  # pagina inicial evaluacion

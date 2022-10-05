@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% for info in treceavo %}
+<h1 style="color:white ; text-align:center;"> Respuesta {{info.numero_respuesta_alt}}</h1> <br/>
+
+  <td style="padding-right: 70px; padding-left: 70px; " >
+    
+    <div class="respuesta" style="color:white ; text-align:center;">
+      <a><strong> Respuesta correcta: </strong></a><br>
+      <h2> {{info.alternativa_respuesta}}  </h2> <br>
+      <h6 style="color:white ; text-align:center;"> {{info.descripcion_breve}} </h6><br>
+
+    
+      <a style="color:#153b63 ; text-align:center;"> <strong> ¿Quieres saber más? Revisa los siguientes links: </strong> </a><br>
+
+      <a href="{{info.url_info_ing}}" {{info.url_info_ing}} > 
+        <button class="btn " style="background:#153b63; color:azure;"> (Inglés) Radiopaedia</button> </a> <br>
+      <a href="{{info.url_info_esp}}" {{info.url_info_esp}} > 
+        <button class="btn " style="background:#153b63; color:azure;"> (Español) SERAM </button> </a> <br><br>
+    </div>
+
+  
+ {% endfor %}
+  <a class="btn btn-outline-primary " href="{% url 'trece_t' %}" role="button" > Ver pregunta</a>
+
+  <a class="btn btn-outline-success " href="{% url 'catorce_t' %}" role="button" > Avanzar siguiente</a>
+</td>
+
+{% endblock %}

@@ -24,6 +24,8 @@ urlpatterns = [
     # se incluye la app alternativas como parte del path. Todo lo incluido en la ruta despues de /alternativas(...) se encuentra en el archivo urls.py de la app alternativas
     path('alternativas/', include('alternativas.urls')),
     path('evaluacion/', include('evaluacion.urls')),
+    path('terminos/', include('terminos.urls')),
+
     path('', include('home.urls')),
 
 ]   

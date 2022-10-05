@@ -11,32 +11,22 @@
     <h3>Aquí podrá estudiar con diferentes imágenes radiológicas y pondrá a prueba sus conocimientos adquiridos.
         También tendrá a su disposicion links para que pueda repasar conceptos y patologías asociadas a las imágenes.
 
+        Para iniciar debes registrarte
+
     </h3>
 
-    <h4> Para comenzar si no estas registrado, selecciona el boton de "Registrarme".
-        Si ya estas registrado, realiza la evaluación inicial en el boton "Evaluacion inicial"
-        Si ya hiciste la evaluación inicial, selecciona alguna forma de estudiar puede ser con "Alternativas" ó en "Pasapalabra"
-    </h4>
 
-    <!--Buttons shown in parallel -->
-    <td>
-        <a href="{% url 'registro' %}" >  
-            <button class="btn btn-outline-warning"> Registrarme </button>
+    <!--Buttons shown in parallel 
+    <div class="contenedor-boton-inicio">
+        <a href="{% url 'signup' %}" >  
+            <button class="btn btn-info" > Registrarme </button>
         </a><br>
 
-        <a href="{% url 'evaluacion' %}" >  
-            <button class="btn btn-outline-warning"> Evaluacion inicial </button>
+        <a href="{% url 'login' %}" >
+            <button class="btn btn-info" > Iniciar sesion </button>
         </a><br>
-
-        <a href="{% url 'inicio_alternativas' %}" >  
-            <button class="btn btn-outline-warning"> Alternativas </button> 
-        </a><br>
-
-        <a href="#" >  
-            <button class="btn btn-outline-warning"> Pasapalabra </button>
-        </a><br>
-    </td>
-</td>
+    </div>
+</td>-->
 
 
 {% endblock %}

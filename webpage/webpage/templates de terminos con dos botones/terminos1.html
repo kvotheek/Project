@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    {% for info in primero %}
+         {% for terms in tp1 %}
+
+            <h1 style="color:white ; text-align:center;"> Caso {{info.numero_respuesta_alt}}</h1> <br/>
+
+            <td style="padding-left: 20px;">
+            <a class="boton zoom"><i class="fas fa-search-plus"></i></a>
+            <a class="boton zoom-out"><i class="fas fa-search-minus"></i></a>
+            <a class="boton zoom-init"><i class="fas fa-recycle"></i></a>
+            <img class= "target" src=" {{info.imagen_con_patologia.url}}" > <br>
+        
+            </td> <!--End of column-->
+        
+            <td style="padding-right: 50px;">
+       
+                <a style=" font-size: 20px">{{info.pregunta}} </a> <br><br>
+
+                                    
+                    <label for="longitud"> Selecciona las palabras que correspondan </label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>{{terms.parte_1a}}</option>
+                        <option value="1">{{terms.parte_2a}}</option>
+                        <option value="2">{{terms.parte_3a}}</option>
+                    </select>
+
+                    <br>
+
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>{{terms.parte_1b}}</option>
+                        <option value="1">{{terms.parte_2b}}</option>
+                        <option value="2">{{terms.parte_3b}}</option>
+                    </select>
+
+                    <br> <br> <a class="btn btn-success text-center contenedor-boton-inicio" href="{% url 'uno_tr' %}" role="button" > ver respuesta </a> 
+                    <br> <br> <a class="btn btn-primary text-center contenedor-boton-inicio" href="{% url 'dos_t' %}" role="button" > Siguiente pregunta </a> 
+                
+
+            </td> <!--End of column 2-->
+
+            
+
+
+        {% endfor %}
+    {% endfor %}
+{% endblock %}

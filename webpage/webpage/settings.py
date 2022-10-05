@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'alternativas',
     'home',
     'evaluacion',
+    'terminos',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,10 @@ MEDIA_URL= '/media/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Existe actualmente un tiempo de cierre automatico de la sesion, que esta dado por la inactividad gracias al comando siguiente
+SESSION_COOKIE_AGE= 300  # Tiempo definido de 5 minutos
+
+#Para que la actividad quede registrada y solo se cierre despues de x minutos de inactividad, se guardan las request.
+SESSION_SAVE_EVERY_REQUEST= True

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- primera columna -->
+<td>
+    <div style="color:white; text-align:center;">
+        <h1 > Estudio por términos pareados</h1>
+        <p> En esta sección de estudio dispondrás de 30 imágenes médicas para poder estudiar de una manera distinta, en donde tendrás que 
+            buscar los términos que más se ajusten al diagnóstico de la imagen y luego pasar a la siguiente. 
+        </p>
+    </div>
+    
+</td>
+<!-- segunda columna -->
+<td>
+    <br> <br> <a class="btn btn-success" href="{% url 'uno_t' %}" role="button" > ¡Vamos!</a>
+<!-- dentro de href la funcion que corresponde con la página a la cual se va a redireccionar -->
+</td>
+
+{% endblock %}

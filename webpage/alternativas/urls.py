@@ -1,15 +1,6 @@
 from django.urls import path
 #preguntas
-from .views import inicio_alternativas
-from .views import uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez
-from .views import once, doce, trece, catorce, quince, diesciseis, diescisiete, diesciocho, diescinueve, veinte
-from .views import veintiuno, veintidos, veintitres, veinticuatro, veinticinco, veintiseis, veintisiete, veintiocho, veintinueve, treinta 
-#from .views import estudio1, answer # Se importan las funciones de la seccion .views
-
-# respuestas 
-from .views import uno_r, dos_r, tres_r, cuatro_r, cinco_r, seis_r, siete_r, ocho_r, nueve_r, diez_r 
-from .views import once_r, doce_r, trece_r, catorce_r, quince_r, diesciseis_r, diescisiete_r, diesciocho_r, diescinueve_r, veinte_r
-from .views import veintiuno_r,veintidos_r, veintitres_r,veinticuatro_r, veinticinco_r, veintiseis_r, veintisiete_r,veintiocho_r, veintinueve_r, treinta_r
+from .views import *
 
 # path (url visible, funcion en .views, name= nombre del archivo.html )
 urlpatterns= [

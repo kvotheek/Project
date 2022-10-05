@@ -14,17 +14,17 @@
     
       <a style="color:#153b63 ; text-align:center;"> <strong> ¿Quieres saber más? Revisa los siguientes links: </strong> </a><br>
 
-      <a href="{{info.url_info_ing}}" {{info.url_info_ing}} > 
+      <a href="{{info.url_info_ing}}" target="_blank" {{info.url_info_ing}} > 
         <button class="btn " style="background:#153b63; color:azure;"> (Inglés) Radiopaedia</button> </a> <br>
-      <a href="{{info.url_info_esp}}" {{info.url_info_esp}} > 
+      <a href="{{info.url_info_esp}}" target="_blank" {{info.url_info_esp}} > 
         <button class="btn " style="background:#153b63; color:azure;"> (Español) SERAM </button> </a> <br><br>
     </div>
 
   
  {% endfor %}
-  <a class="btn btn-outline-warning " href="{% url 'uno' %}" role="button" > Ver pregunta</a>
+  <a class="btn btn-outline-primary " href="{% url 'uno' %}" role="button" > Ver pregunta</a>
 
-  <a class="btn btn-outline-warning " href="{% url 'dos' %}" role="button" > Avanzar siguiente</a>
+  <a class="btn btn-outline-success " href="{% url 'dos' %}" role="button" > Avanzar siguiente</a>
 </td>
 
 {% endblock %}
